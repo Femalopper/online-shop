@@ -6,7 +6,8 @@
         "cost": "250",
         "quantity": "1",
         "image": "1.jpg",
-        "currency": "₽"
+        "currency": "₽",
+        "hit": "hit"
     },
     {
         "articul": "02",
@@ -41,7 +42,7 @@
         "previousCost": "2000",
         "cost": "1500",
         "quantity": "1",
-        "image": "4.jpg",
+        "image": "5.jpg",
         "currency": "₽"
     },
     {
@@ -50,8 +51,9 @@
         "previousCost": "2300",
         "cost": "1700",
         "quantity": "1",
-        "image": "4.jpg",
-        "currency": "₽"
+        "image": "6.jpg",
+        "currency": "₽",
+        "hit": "hit"
     },
     {
         "articul": "07",
@@ -59,7 +61,7 @@
         "previousCost": "3500",
         "cost": "2900",
         "quantity": "1",
-        "image": "4.jpg",
+        "image": "7.jpg",
         "currency": "₽"
     },
     {
@@ -68,7 +70,7 @@
         "previousCost": "2800",
         "cost": "1600",
         "quantity": "1",
-        "image": "4.jpg",
+        "image": "8.jpg",
         "currency": "₽"
     },
     {
@@ -77,8 +79,9 @@
         "previousCost": "3200",
         "cost": "3000",
         "quantity": "1",
-        "image": "4.jpg",
-        "currency": "₽"
+        "image": "9.png",
+        "currency": "₽",
+        "hit": "hit"
     },
     {
         "articul": "10",
@@ -86,7 +89,7 @@
         "previousCost": "3800",
         "cost": "3500",
         "quantity": "1",
-        "image": "4.jpg",
+        "image": "10.jpg",
         "currency": "₽"
     },
     {
@@ -95,8 +98,9 @@
         "previousCost": "3900",
         "cost": "3600",
         "quantity": "1",
-        "image": "4.jpg",
-        "currency": "₽"
+        "image": "11.jpg",
+        "currency": "₽",
+        "hit": "hit"
     },
     {
         "articul": "12",
@@ -104,7 +108,7 @@
         "previousCost": "4200",
         "cost": "3900",
         "quantity": "1",
-        "image": "4.jpg",
+        "image": "12.jpg",
         "currency": "₽"
     }
 ]

@@ -1,74 +1,23 @@
 import React from 'react';
 import '../test.css';
-import require from 'requirejs';
+import { selectGoods } from '../../store/goodsSlice';
+import { useSelector } from 'react-redux';
+import Goods from '../Goods/Goods';
 
 const Main = () => {
+  const goods = useSelector(selectGoods);
+
+  const showHits = () => {
+    const hits = goods.filter((product) => Object.hasOwn(product, 'hit'));
+    const priceSortedHits = hits.sort((a, b) => +a.cost - +b.cost);
+    return priceSortedHits.map((item) => <Goods data={item} key={item.articul} />);
+  };
+
   return (
     <section id="page1">
       <h1>Хиты продаж</h1>
-      <article className="table">
-        <article className="row">
-          <article className="cell">
-            <a href="#">
-              <img src={require('../../img/1.jpg')} alt="element_1" />
-            </a>
-            <figcaption>База + Топ комплект</figcaption>
-            <div className="price">
-              <p className="price0">400 руб.</p>
-              <p className="price1">250 руб.</p>
-            </div>
-            <div className="product__quantity"></div>
-            <button className="add-to-cart" type="button">
-              <div className="add">Добавить в корзину</div>
-              <img src={require('../../img/shopping-basket-wight.svg').default} />
-            </button>
-          </article>
-          <article className="cell">
-            <a href="#">
-              <img src={require('../../img/6.jpg')} alt="element_6" />
-            </a>
-            <figcaption>Начальный Bluesky</figcaption>
-            <div className="price">
-              <p className="price0">2300 руб.</p>
-              <p className="price1">1700 руб.</p>
-            </div>
-            <div className="product__quantity"></div>
-            <button className="add-to-cart" type="button">
-              <div className="add">Добавить в корзину</div>
-              <img src={require('../../img/shopping-basket-wight.svg').default} />
-            </button>
-          </article>
-          <article className="cell">
-            <a href="#">
-              <img src={require('../../img/11.jpg')} alt="element_11" />
-            </a>
-            <figcaption>Bluesky Гибридный</figcaption>
-            <div className="price">
-              <p className="price0">3900 руб.</p>
-              <p className="price1">3600 руб.</p>
-            </div>
-            <div className="product__quantity"></div>
-            <button className="add-to-cart" type="button">
-              <div className="add">Добавить в корзину</div>
-              <img src={require('../../img/shopping-basket-wight.svg').default} />
-            </button>
-          </article>
-          <article className="cell">
-            <a href="#">
-              <img src={require('../../img/12.jpg')} alt="element_12" />
-            </a>
-            <figcaption>Продвинутый Bluesky</figcaption>
-            <div className="price">
-              <p className="price0">4200 руб.</p>
-              <p className="price1">3900 руб.</p>
-            </div>
-            <div className="product__quantity"></div>
-            <button className="add-to-cart" type="button">
-              <div className="add">Добавить в корзину</div>
-              <img src={require('../../img/shopping-basket-wight.svg').default} />
-            </button>
-          </article>
-        </article>
+      <article className="goods-wrapper">
+        <article className="goods-field">{showHits()}</article>
       </article>
       <section className="main__description">
         <h2>
