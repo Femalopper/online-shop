@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Oswald:wght@200;300;400&family=Secular+One&display=swap');
+
+#goods {
+  width: 100%;
+  background-color: white;
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+#goods ul li a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.basket:hover {
+  -ms-transform: scale(1.17);
+  -webkit-transform: scale(1.17);
+  -o-transform: scale(1.17);
+  -moz-transform: scale(1.17);
+  transform: scale(1.17);
+}
+
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  bottom: 51px;
+  left: 30px;
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.6em;
+  padding: 2px;
+  color: rgb(190, 27, 187);
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  #goods {
+    font-size: 0.9em;
+    height: 120px;
+  }
+  .logo {
+    width: 80%;
+    margin-left: 30%;
+  }
+}
+
+@media screen and (min-width: 270px) and (max-width: 400px) {
+  #goods {
+    font-size: 0.8em;
+    height: 120px;
+  }
+
+  .logo {
+    font-size: 2.6em;
+    width: 70%;
+    margin-left: 18%;
+  }
+
+  .circle {
+    height: 13px;
+  }
+}

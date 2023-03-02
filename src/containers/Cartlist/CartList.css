@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Oswald:wght@200;300;400&family=Secular+One&display=swap');
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.close-cart-wrapper {
+  align-self: flex-end;
+  margin-bottom: 30px;
+  margin-right: -50px;
+}
+
+.close-cart {
+  background-color: white;
+  font-size: 1.2em;
+  color: red;
+  border: none;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+
+.close-cart:hover {
+  background-color: rgb(251, 251, 251);
+  -webkit-box-shadow: 0 3px 25px rgb(0 0 0 / 15%);
+  box-shadow: 0 3px 25px rgb(0 0 0 / 15%);
+}
+
+.cart {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  -webkit-box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
+  box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
+  border-radius: 3px;
+  background-color: white;
+  padding: 0px 50px 50px 50px;
+}
+
+.cart-active {
+  display: flex;
+  transform: translateY(5%);
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: ease-in-out 0.8s;
+  animation: ease-in-out 0.8s;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.animate-cart-close {
+  transform: translateY(15%);
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-animation: cubic-bezier(0.1, -0.6, 0.2, 0) 0.8s;
+  animation: cubic-bezier(0.1, -0.6, 0.2, 0) 0.8s;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.cart-empty {
+  font-weight: 400;
+  padding: 20px 0px;
+}
+
+.good {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  font-size: 0.9em;
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: 400;
+}
+
+td {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+td,
+tr,
+th {
+  width: 130px;
+  text-align: center;
+}
+
+.delete-all {
+  cursor: pointer;
+  background-color: rgb(250, 250, 250);
+}
+
+.delete-all-span {
+  padding: 3px;
+  border-bottom: 2px solid rgb(97, 97, 97);
+}
+
+.delete-all:hover,
+.delete-all-span:hover,
+.minus:hover,
+.plus:hover,
+.delete-item:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.total-result {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(248, 248, 248, 0.4);
+  border-top: 1px solid rgb(201, 201, 201);
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding: 10px 0px 10px 20px;
+}
+
+.total-sum-number {
+  margin-left: 10px;
+}
+
+.total-quantity {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 840px) and (max-width: 1000px) {
+  .cart {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 620px) and (max-width: 840px) {
+  .cart {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 620px) {
+  table,
+  td,
+  th,
+  tr,
+  tbody {
+    display: block;
+  }
+
+  td {
+    width: 297px;
+    border: 1px solid rgb(239, 239, 239);
+  }
+
+  th {
+    display: none;
+  }
+
+  .delete-all {
+    width: 299px;
+    display: block;
+  }
+
+  .delete-item-td {
+    background-color: rgb(250, 250, 250);
+  }
+
+  .cart {
+    width: 300px;
+  }
+
+  .cart-active {
+    transform: translateY(2%);
+  }
+
+  .total-result {
+    padding-left: 0;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 270px) and (max-width: 420px) {
+  .cart-container {
+    background-color: white;
+    padding: 0;
+  }
+
+  .cart-active {
+    transform: translateY(0%);
+  }
+
+  table,
+  td,
+  th,
+  tr,
+  tbody {
+    display: block;
+  }
+
+  td {
+    width: 257px;
+    border: 1px solid rgb(239, 239, 239);
+  }
+
+  .cart {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 260px;
+    box-shadow: none;
+  }
+
+  .close-cart-wrapper {
+    margin-bottom: 20px;
+    margin-right: -10px;
+  }
+
+  th {
+    display: none;
+  }
+
+  .delete-all {
+    width: 258px;
+    display: block;
+  }
+
+  .total-result {
+    padding-left: 0;
+    font-size: 0.8em;
+  }
+}

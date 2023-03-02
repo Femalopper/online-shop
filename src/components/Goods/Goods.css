@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Oswald:wght@200;300;400&family=Secular+One&display=swap');
+
+.goods-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  margin-right: 0.2px;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid rgb(240, 240, 240);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.goods-block:hover {
+  cursor: pointer;
+  border: 2px solid rgb(129, 252, 252);
+  transition-duration: 0.2s;
+}
+
+.goods-block img {
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.good-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.price {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1em;
+  color: rgb(216, 124, 237);
+}
+
+.change-quantity {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 30px;
+  margin: 20px 0px;
+}
+
+.change-quantity button {
+  width: 22px;
+  border-left: none;
+  border-right: none;
+  border-top: 0.2px solid rgb(209, 209, 209);
+  border-bottom: 0.2px solid rgb(209, 209, 209);
+  background-color: #aae0ef;
+  text-align: center;
+  color: white;
+}
+
+.change-quantity button.minus-quantity {
+  background-color: #deaeee;
+  cursor: pointer;
+}
+
+.change-quantity input {
+  text-align: center;
+  width: 60%;
+  border-left: none;
+  border-right: none;
+  border-top: 0.2px solid rgb(209, 209, 209);
+  border-bottom: 0.2px solid rgb(209, 209, 209);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 0.8em;
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.change-quantity button.plus-quantity {
+  cursor: pointer;
+}
+
+.swal2-popup {
+  font-size: 0.75em !important;
+  font-family: 'Caveat' !important;
+  padding-bottom: 30px !important;
+  margin-bottom: 50px !important;
+}
+
+.swal2-icon.swal2-success {
+  border-color: #ea9ffe !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 0.25em solid rgba(240, 115, 254, 0.3) !important;
+}
+
+.swal2-icon.swal2-success [class^='swal2-success-line'] {
+  background-color: #fc81fc !important;
+}
+
+.zero-quantity {
+  color: red;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .goods-block {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .goods-block {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .goods-block {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .goods-block {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  .goods-block {
+    width: 60%;
+  }
+}

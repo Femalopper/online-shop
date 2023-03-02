@@ -1,0 +1,98 @@
+[
+    {
+        "articul": "01",
+        "title": "База + Топ комплект",
+        "cost": "250",
+        "quantity": "1",
+        "image": "1.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "02",
+        "title": "База/Топ/Праймер",
+        "cost": "350",
+        "quantity": "1",
+        "image": "2.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "03",
+        "title": "Экспресс маникюр",
+        "cost": "500",
+        "quantity": "1",
+        "image": "3.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "04",
+        "title": "Базовый Bluesky",
+        "cost": "1900",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "05",
+        "title": "Стартовый Bluesky",
+        "cost": "1500",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "06",
+        "title": "Начальный Bluesky",
+        "cost": "1700",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "07",
+        "title": "Стандарт Стиль",
+        "cost": "2900",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "08",
+        "title": "Стандарт Плюс",
+        "cost": "1600",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "09",
+        "title": "CosmoLac Стандарт",
+        "cost": "3000",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "10",
+        "title": "Стандарт Улучшенный",
+        "cost": "3500",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "11",
+        "title": "Bluesky Гибридный",
+        "cost": "3600",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    },
+    {
+        "articul": "12",
+        "title": "Продвинутый Bluesky",
+        "cost": "3900",
+        "quantity": "1",
+        "image": "4.jpg",
+        "currency": "₽"
+    }
+]
