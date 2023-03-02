@@ -13,7 +13,7 @@ import Error from './components/Error/Error';
 
 const list = {
   nav: [
-    { link: '/online-shop-template', text: 'Главная' },
+    { link: '/online-shop-template/main', text: 'Главная' },
     { link: '/online-shop-template/goods', text: 'Каталог товаров' },
     { link: '/online-shop-template/shippment', text: 'Доставка и оплата' },
     { link: '/online-shop-template/about', text: 'О компании' },
@@ -27,7 +27,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/online-shop-template" element={<Header data={list} />}>
-            <Route index element={<Main />} />
+            <Route path="main" element={<Main />} />
             <Route path=":cardURLL" element={<Card />} />
             <Route path="goods" element={<GoodsList />} />
             <Route path=":cardURL" element={<Card />} />
