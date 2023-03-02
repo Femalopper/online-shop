@@ -434,18 +434,6 @@ h2 {
   list-style-type: disc;
 }
 
-.about_us {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  font-size: 1.4em;
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 60px;
-}
-
 address {
   color: black;
   text-align: right;
