@@ -162,7 +162,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   position: relative;
-  color: gray;
+  color: rgb(118, 118, 118);
   font-size: 1em;
   background-color: #ffe7fc;
   width: 90%;

@@ -394,36 +394,6 @@ h1 {
   justify-content: space-evenly;
 }
 
-.add-to-cart {
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: gray;
-  font-size: 1em;
-  background-color: #ffe7fc;
-  width: 90%;
-  height: 60px;
-  border: 1px solid white;
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #d577c1,
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-  margin-top: 5%;
-  font-weight: bold;
-  border-radius: 10px;
-  padding-left: 5%;
-  transition: 0.2s;
-}
-
-.add-to-cart:hover {
-  box-shadow: none;
-  border: 1px solid #d577c1;
-  background-color: #fee0fa;
-}
-
-.add-to-cart img {
-  width: 5%;
-  margin-top: 1%;
-}
-
 h2 {
   font-size: 1.4em;
   color: rgb(170, 20, 115);
@@ -476,13 +446,12 @@ h2 {
   width: 50%;
   padding-right: 5%;
   padding-left: 5%;
-  padding-top: 3%;
+  padding-top: 1%;
   padding-bottom: 2%;
-  display: table-cell;
   font-size: 1.4em;
 }
 
-.pay,
+.pay img,
 .shippment img {
   margin-top: 3%;
 }
@@ -491,8 +460,7 @@ h2 {
   width: 50%;
   padding-left: 5%;
   padding-top: 1%;
-  padding-bottom: 2%;
-  display: block;
+  padding-bottom: 60px;
   font-size: 1.4em;
 }
 
