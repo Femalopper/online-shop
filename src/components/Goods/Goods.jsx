@@ -11,7 +11,7 @@ const Goods = (props) => {
   const goodQuantity = React.createRef();
   const goods = useSelector(selectGoods);
   const dispatch = useDispatch();
-  const { image, cost, title, currency, quantity, articul } = props.data;
+  const { image, previousCost, cost, title, currency, quantity, articul } = props.data;
 
   const changeHandler = (event) => {
     event.preventDefault();
@@ -44,6 +44,7 @@ const Goods = (props) => {
   }, {});
 
   const addToCartHandler = (event) => {
+    console.log(event.target);
     const { currentId, value } = handler(event.target);
 
     if (value !== 0) {
@@ -85,15 +86,17 @@ const Goods = (props) => {
   return (
     <div className="cell">
       <img src={require(`../../img/${image}`)} alt="" />
-      <p className="good-title">{title}</p>
+      <figcaption className="good-title">{title}</figcaption>
       <div className="price">
-        <p className="price0">400 руб.</p>
-        <p className="price1">250 руб.</p>
+        <p className="price0">
+          {previousCost}
+          {currency}
+        </p>
+        <p className="price1">
+          {cost}
+          {currency}
+        </p>
       </div>
-      <p className="price">
-        {cost}
-        {currency}
-      </p>
       <div className="change-quantity">
         <button className="minus-quantity" data-key={articul} onClick={minusHandler}>
           -
@@ -112,8 +115,14 @@ const Goods = (props) => {
           +
         </button>
       </div>
-      <button className="add-to-cart" data-key={articul} onClick={addToCartHandler}>
+      <button className="add-to-cart" type="button" data-key={articul} onClick={addToCartHandler}>
         Добавить в корзину
+        <img
+          src={require('../../img/shopping-basket-wight.svg').default}
+          width="30"
+          height="30"
+          data-key={articul}
+        />
       </button>
     </div>
   );

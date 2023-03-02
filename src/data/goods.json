@@ -2,6 +2,7 @@
     {
         "articul": "01",
         "title": "База + Топ комплект",
+        "previousCost": "400",
         "cost": "250",
         "quantity": "1",
         "image": "1.jpg",
@@ -10,6 +11,7 @@
     {
         "articul": "02",
         "title": "База/Топ/Праймер",
+        "previousCost": "600",
         "cost": "350",
         "quantity": "1",
         "image": "2.jpg",
@@ -18,6 +20,7 @@
     {
         "articul": "03",
         "title": "Экспресс маникюр",
+        "previousCost": "900",
         "cost": "500",
         "quantity": "1",
         "image": "3.jpg",
@@ -26,6 +29,7 @@
     {
         "articul": "04",
         "title": "Базовый Bluesky",
+        "previousCost": "2500",
         "cost": "1900",
         "quantity": "1",
         "image": "4.jpg",
@@ -34,6 +38,7 @@
     {
         "articul": "05",
         "title": "Стартовый Bluesky",
+        "previousCost": "2000",
         "cost": "1500",
         "quantity": "1",
         "image": "4.jpg",
@@ -42,6 +47,7 @@
     {
         "articul": "06",
         "title": "Начальный Bluesky",
+        "previousCost": "2300",
         "cost": "1700",
         "quantity": "1",
         "image": "4.jpg",
@@ -50,6 +56,7 @@
     {
         "articul": "07",
         "title": "Стандарт Стиль",
+        "previousCost": "3500",
         "cost": "2900",
         "quantity": "1",
         "image": "4.jpg",
@@ -58,6 +65,7 @@
     {
         "articul": "08",
         "title": "Стандарт Плюс",
+        "previousCost": "2800",
         "cost": "1600",
         "quantity": "1",
         "image": "4.jpg",
@@ -66,6 +74,7 @@
     {
         "articul": "09",
         "title": "CosmoLac Стандарт",
+        "previousCost": "3200",
         "cost": "3000",
         "quantity": "1",
         "image": "4.jpg",
@@ -74,6 +83,7 @@
     {
         "articul": "10",
         "title": "Стандарт Улучшенный",
+        "previousCost": "3800",
         "cost": "3500",
         "quantity": "1",
         "image": "4.jpg",
@@ -82,6 +92,7 @@
     {
         "articul": "11",
         "title": "Bluesky Гибридный",
+        "previousCost": "3900",
         "cost": "3600",
         "quantity": "1",
         "image": "4.jpg",
@@ -90,6 +101,7 @@
     {
         "articul": "12",
         "title": "Продвинутый Bluesky",
+        "previousCost": "4200",
         "cost": "3900",
         "quantity": "1",
         "image": "4.jpg",

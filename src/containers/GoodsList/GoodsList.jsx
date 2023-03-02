@@ -9,6 +9,7 @@ const GoodsList = () => {
 
   return (
     <div className="goods-wrapper">
+      <h1>Готовые комплекты</h1>
       <div className="goods-field">
         {goods.map((item) => (
           <Goods data={item} key={item.articul} />
