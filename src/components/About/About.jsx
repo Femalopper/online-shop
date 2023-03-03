@@ -4,7 +4,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <section id="page4">
+    <section id="page4" className="goods-wrapper">
       <h1>О компании</h1>
       <div className="about_us">
         Мы рады приветствовать посетителей в нашем интернет-магазине. У нас предлагаются товары,

@@ -103,7 +103,7 @@ html {
 }
 
 body {
-  background: #fff2fc;
+  background-color: rgb(251, 251, 251);
   max-width: 1800px;
   padding: 0;
   margin: 0 auto;
@@ -422,13 +422,13 @@ h2 {
 }
 
 .main__description {
-  width: 88%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   font-size: 1.3em;
-  margin-left: 6%;
-  padding-top: 2%;
-  margin-top: -2%;
-  margin-bottom: 3%;
   text-align: justify;
+  margin-bottom: 60px;
 }
 
 .main_info {
@@ -458,8 +458,7 @@ address a {
 /*---Форма регистрации-----*/
 
 .blind_Layer {
-  background-image: url(../img/background.gif);
-  background-color: rgb(251, 251, 251);
+  background-image: url(../../src/img/background.gif);
   opacity: 0.98;
   bottom: 0;
   left: 0;
@@ -467,7 +466,6 @@ address a {
   right: 0;
   top: 0;
   z-index: 1;
-  display: none;
 }
 
 .blind_LayerWidth {
@@ -475,9 +473,6 @@ address a {
 }
 
 .popup {
-  display: none;
-  background: transparent;
-  border: none;
   -webkit-box-shadow: 550px 5px 15px 5px #ffdbff inset, 550px 5px 15px 5px rgb(255, 227, 248) inset,
     550px 5px 15px 5px #faeafc inset, 550px 10px 15px 7px #f7dbff inset,
     550px 15px 7px #f4beff inset, 550px 7px 27px 1px #ffb4ff inset;

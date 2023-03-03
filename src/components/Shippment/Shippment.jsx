@@ -5,7 +5,7 @@ import './Shippment.css';
 
 const Shippment = () => {
   return (
-    <section id="page3">
+    <section id="page3" className="goods-wrapper">
       <h1>Доставка</h1>
       <div className="ship-info">
         <div className="shippment">

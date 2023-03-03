@@ -5,6 +5,7 @@ import { selectQuantity, cartStateSwitcher } from '../../store/cartSlice';
 import '../test.css';
 import './Header.css';
 import { goodsStateSwitcher, selectGoodsState } from '../../store/goodsSlice';
+import { formStateSwitcher } from '../../store/formSlice';
 import cart from '../../img/shopping-basket-wight.svg';
 import classNames from 'classnames';
 import require from 'requirejs';
@@ -29,6 +30,15 @@ const Header = (props) => {
     });
   };
 
+  const openRegistrationForm = (event) => {
+    event.preventDefault();
+    dispatch(goodsStateSwitcher('closed'));
+    dispatch(formStateSwitcher('openning'));
+    setTimeout(() => {
+      dispatch(formStateSwitcher('opened'));
+    });
+  };
+
   return (
     <div className={classNames({ hide: goodsState === 'closed' }, 'scrollable')} id="goods">
       <header>
@@ -42,34 +52,16 @@ const Header = (props) => {
             <input className="enter" type="password" name="psw" />
             <div className="submission">
               <input className="entry_1" type="submit" value="Войти" />
-              <input className="entry_2" type="button" value="Зарегистрироваться" href="#" />
+              <input
+                className="entry_2"
+                type="button"
+                value="Зарегистрироваться"
+                href="#"
+                onClick={openRegistrationForm}
+              />
             </div>
           </fieldset>
         </form>
-        {/* Форма регистрации(кнопка зарегистрироваться)*/}
-        <div id="blind_Layer" className="blind_Layer">
-          <div id="registration" className="popup">
-            <button href="#" style={{ float: 'right' }} className="closeButton">
-              ✕
-            </button>
-            <h2>Введите ваши контактные данные</h2>
-
-            <form id="formToSend">
-              <input id="name" type="text" placeholder="Имя" />
-              <input
-                id="mailto"
-                type="text"
-                placeholder="Электронная почта"
-                className="text-input"
-              />
-              <input id="password" type="password" placeholder="Пароль" className="text-input" />
-              <input id="telephone" type="text" placeholder="Телефон" />
-            </form>
-            <button type="submit" id="send_reg" className="send_registration" href="#" disabled>
-              Зарегистрироваться
-            </button>
-          </div>
-        </div>
         {/*<!---Логотип сайта----------------------------------------------->*/}
         <div className="logo">
           <img src={require('../../img/logo.png')} />

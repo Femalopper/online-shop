@@ -14,11 +14,9 @@ const Main = () => {
   };
 
   return (
-    <section id="page1">
+    <section id="page1" className="goods-wrapper">
       <h1>Хиты продаж</h1>
-      <article className="goods-wrapper">
-        <article className="goods-field">{showHits()}</article>
-      </article>
+      <section className="goods-field">{showHits()}</section>
       <section className="main__description">
         <h2>
           <i>Shellac-butik – все для профессионального маникюра и дизайна ногтей</i>

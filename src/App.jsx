@@ -10,6 +10,7 @@ import Shippment from './components/Shippment/Shippment';
 import About from './components/About/About';
 import Contacts from './components/Contacts/Contacts';
 import Error from './components/Error/Error';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 const list = {
   nav: [
@@ -39,6 +40,7 @@ const App = () => {
         </Routes>
       </Router>
       <CartList />
+      <RegistrationForm />
     </>
   );
 };

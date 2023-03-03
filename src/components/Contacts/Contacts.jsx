@@ -4,7 +4,7 @@ import './Contacts.css';
 
 const Contacts = () => {
   return (
-    <section id="page5">
+    <section id="page5" className="goods-wrapper">
       <h1>Контакты</h1>
       <div className="about_us">
         <h2>Отдел розничных продаж:</h2>
