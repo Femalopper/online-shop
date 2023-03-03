@@ -39,7 +39,7 @@ const CartForm = React.forwardRef((props, ref) => {
         : currentId === 'tel'
         ? phoneNumber(value)
         : validateEmail(value);
-    dispatch(setConsumerData({ validity, currentId }));
+    dispatch(setConsumerData({ validity, currentId, value }));
   };
 
   const sendOrder = (event) => {
