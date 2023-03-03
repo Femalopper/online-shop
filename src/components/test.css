@@ -98,8 +98,8 @@ ul {
 }
 
 html {
-  margin-right: calc(-1 * (100vw - 100%));
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -252,7 +252,7 @@ ul.mainNav {
   padding-right: 3%;
 }
 
-.mainNav button {
+.mainNav a {
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 0.93em;
@@ -268,7 +268,7 @@ ul.mainNav {
   text-shadow: 1px 1px 2px black, 0 0 1em white;
 }
 
-.mainNav li button:before {
+.mainNav li a:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -278,23 +278,23 @@ ul.mainNav {
   animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
 
-.mainNav li:nth-child(1) button {
+.mainNav li:nth-child(1) a {
   animation: show 0.2s 0.6s ease 1 both;
 }
 
-.mainNav li:nth-child(2) button {
+.mainNav li:nth-child(2) a {
   animation: show 0.2s 0.8s ease 1 both;
 }
 
-.mainNav li:nth-child(3) button {
+.mainNav li:nth-child(3) a {
   animation: show 0.2s 1s ease 1 both;
 }
 
-.mainNav li:nth-child(4) button {
+.mainNav li:nth-child(4) a {
   animation: show 0.2s 1.2s ease 1 both;
 }
 
-.mainNav li:nth-child(5) button {
+.mainNav li:nth-child(5) a {
   animation: show 0.2s 1.4s ease 1 both;
 }
 

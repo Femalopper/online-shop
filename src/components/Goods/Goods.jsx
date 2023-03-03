@@ -52,6 +52,7 @@ const Goods = (props) => {
       dispatch(increment(data));
       dispatch(changeGoodsQuantity({ currentId, value: 1 }));
       Swal.fire({
+        heightAuto: false,
         position: 'center',
         icon: 'success',
         title: 'Товар добавлен в корзину!',

@@ -45,6 +45,7 @@ const CartForm = React.forwardRef((props, ref) => {
   const sendOrder = (event) => {
     event.preventDefault();
     Swal.fire({
+      heightAuto: false,
       position: 'center',
       icon: 'success',
       title: 'Заказ оформлен! Ожидайте звонка.',
@@ -60,10 +61,12 @@ const CartForm = React.forwardRef((props, ref) => {
 
     ref.current.style.pointerEvents = 'none';
     setTimeout(() => {
-      dispatch(props.deleteAll());
-      dispatch(cartStateSwitcher('sent order'));
       ref.current.style.pointerEvents = 'auto';
-      dispatch(goodsStateSwitcher('opened'));
+      dispatch(cartStateSwitcher('sent order'));
+      dispatch(props.deleteAll());
+      setTimeout(() => {
+        dispatch(goodsStateSwitcher('opened'));
+      }, 1500);
     }, 1500);
   };
 

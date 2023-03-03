@@ -135,29 +135,6 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.swal2-popup {
-  font-size: 0.75em !important;
-  font-family: 'Caveat' !important;
-  padding-bottom: 30px !important;
-  margin-bottom: 50px !important;
-}
-
-.swal2-icon.swal2-success {
-  border-color: #ea9ffe !important;
-}
-
-.swal2-icon.swal2-success .swal2-success-ring {
-  border: 0.25em solid rgba(240, 115, 254, 0.3) !important;
-}
-
-.swal2-icon.swal2-success [class^='swal2-success-line'] {
-  background-color: #fc81fc !important;
-}
-
-.zero-quantity {
-  color: red;
-}
-
 .add-to-cart {
   display: flex;
   align-items: center;
@@ -187,6 +164,29 @@ input::-webkit-inner-spin-button {
 .add-to-cart img {
   width: 5%;
   margin-top: 1%;
+}
+
+.swal2-popup {
+  font-size: 0.75em !important;
+  font-family: 'Caveat' !important;
+  padding-bottom: 30px !important;
+  margin-bottom: 50px !important;
+}
+
+.swal2-icon.swal2-success {
+  border-color: #ea9ffe !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 0.25em solid rgba(240, 115, 254, 0.3) !important;
+}
+
+.swal2-icon.swal2-success [class^='swal2-success-line'] {
+  background-color: #fc81fc !important;
+}
+
+.zero-quantity {
+  color: red;
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1400px) {

@@ -30,7 +30,7 @@ const Header = (props) => {
   };
 
   return (
-    <div className={classNames({ hide: goodsState === 'closed' })} id="goods">
+    <div className={classNames({ hide: goodsState === 'closed' }, 'scrollable')} id="goods">
       <header>
         {/* Форма регистрации */}
         <form className="form">
