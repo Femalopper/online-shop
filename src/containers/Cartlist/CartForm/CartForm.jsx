@@ -79,7 +79,9 @@ const CartForm = (props) => {
               <input
                 type={key === 'tel' ? 'tel' : 'text'}
                 onInput={checkValidity}
-                className={classNames('make-order-field', { incorrect: orderForm[key].validity })}
+                className={classNames('make-order-field', {
+                  incorrect: orderForm[key].validity === false ? true : false,
+                })}
                 name={key}
                 placeholder={
                   key === 'tel'

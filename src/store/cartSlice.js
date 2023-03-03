@@ -11,9 +11,9 @@ export const cartSlice = createSlice({
     totalQuantity: 0,
     submitBtnVisibility: true,
     consumerData: {
-      name: { validity: false, value: '' },
-      tel: { validity: false, value: '' },
-      mail: { validity: false, value: '' },
+      name: { validity: '', value: '' },
+      tel: { validity: '', value: '' },
+      mail: { validity: '', value: '' },
     },
   },
   reducers: {
