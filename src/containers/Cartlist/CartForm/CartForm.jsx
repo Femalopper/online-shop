@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 import classNames from 'classnames';
 import './CartForm.css';
 
-const CartForm = React.forwardRef((props, ref) => {
+const CartForm = (props) => {
   const submitButton = useSelector(selectSubmitBtnVisibility);
   const orderForm = useSelector(selectConsumerData);
   const dispatch = useDispatch();
@@ -44,30 +44,30 @@ const CartForm = React.forwardRef((props, ref) => {
 
   const sendOrder = (event) => {
     event.preventDefault();
-    Swal.fire({
-      heightAuto: false,
-      position: 'center',
-      icon: 'success',
-      title: 'Заказ оформлен! Ожидайте звонка.',
-      showConfirmButton: false,
-      timer: 1500,
-      width: 300,
-    });
 
     fetch('#', {
       method: 'POST',
-      body: { productsData: cart, userData: [...new FormData(formRef.current)] },
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify({ productsData: cart, userData: [...new FormData(formRef.current)] }),
     });
 
-    ref.current.style.pointerEvents = 'none';
+    dispatch(cartStateSwitcher('sent order'));
+    dispatch(props.deleteAll());
     setTimeout(() => {
-      ref.current.style.pointerEvents = 'auto';
-      dispatch(cartStateSwitcher('sent order'));
-      dispatch(props.deleteAll());
-      setTimeout(() => {
-        dispatch(goodsStateSwitcher('opened'));
-      }, 1500);
-    }, 1500);
+      dispatch(cartStateSwitcher('closed'));
+      Swal.fire({
+        heightAuto: false,
+        position: 'center',
+        icon: 'success',
+        title: 'Заказ оформлен! Ожидайте звонка.',
+        showConfirmButton: false,
+        timer: 2500,
+        width: 300,
+      });
+      dispatch(goodsStateSwitcher('opened'));
+    }, 800);
   };
 
   return (
@@ -107,7 +107,7 @@ const CartForm = React.forwardRef((props, ref) => {
       </form>
     </>
   );
-});
+};
 
 CartForm.displayName = 'CartForm';
 export default CartForm;

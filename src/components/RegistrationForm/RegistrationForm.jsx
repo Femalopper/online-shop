@@ -10,19 +10,20 @@ import {
 } from '../../store/formSlice';
 import { goodsStateSwitcher } from '../../store/goodsSlice';
 import classNames from 'classnames';
+import Swal from 'sweetalert2';
 
 const RegistrationForm = () => {
   const formState = useSelector(selectFormState);
   const registerBtn = useSelector(selectRegisterVisibility);
   const registerForm = useSelector(selectConsumerData);
+  const containerRef = React.createRef();
+  const formRef = React.createRef();
   const dispatch = useDispatch();
 
   const activateRegisterBtn = () => {
     const { name, tel, mail, password } = registerForm;
-    console.log(registerForm);
     if (name.validity && tel.validity && mail.validity && password.validity) {
       dispatch(registerBtnSwitcher(false));
-      console.log(registerBtn);
     } else dispatch(registerBtnSwitcher(true));
   };
 
@@ -44,7 +45,7 @@ const RegistrationForm = () => {
   const checkValidity = (event) => {
     event.preventDefault();
     const value = event.target.value;
-    const currentId = event.target.id;
+    const currentId = event.target.name;
     const validity =
       currentId === 'name'
         ? value.length >= 2
@@ -65,6 +66,33 @@ const RegistrationForm = () => {
     }, 500);
   };
 
+  const sendRegisterData = (event) => {
+    event.preventDefault();
+    fetch('#', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify({ userData: [...new FormData(formRef.current)] }),
+    });
+    dispatch(formStateSwitcher('sent register data'));
+
+    setTimeout(() => {
+      dispatch(formStateSwitcher('closed'));
+      Swal.fire({
+        heightAuto: false,
+        position: 'center',
+        icon: 'success',
+        title:
+          'Вы зарегистрированы! Для того, чтобы подтвердить регистрацию, перейдите по ссылке на почте',
+        showConfirmButton: false,
+        timer: 2500,
+        width: 400,
+      });
+      dispatch(goodsStateSwitcher('opened'));
+    }, 500);
+  };
+
   return (
     <div
       id="blind_Layer"
@@ -72,10 +100,11 @@ const RegistrationForm = () => {
         {
           hide: formState === 'closed',
           'cart-active': formState === 'opened',
-          'animate-cart-close': formState === 'closing' || formState === 'sent order',
+          'animate-cart-close': formState === 'closing' || formState === 'sent register data',
         },
         'blind_Layer'
       )}
+      ref={containerRef}
     >
       <div id="registration" className="popup">
         <button href="#" style={{ float: 'right' }} className="closeButton" onClick={closeForm}>
@@ -83,14 +112,15 @@ const RegistrationForm = () => {
         </button>
         <h2>Введите ваши контактные данные</h2>
 
-        <form id="formToSend">
-          <input id="name" type="text" placeholder="Имя" onInput={checkValidity} />
+        <form id="formToSend" onSubmit={sendRegisterData} ref={formRef}>
+          <input id="name" type="text" placeholder="Имя" onInput={checkValidity} name="name" />
           <input
             id="mail"
             type="text"
             placeholder="Электронная почта"
             className="text-input"
             onInput={checkValidity}
+            name="mail"
           />
           <input
             id="password"
@@ -98,18 +128,19 @@ const RegistrationForm = () => {
             placeholder="Пароль"
             className="text-input"
             onInput={checkValidity}
+            name="password"
           />
-          <input id="tel" type="text" placeholder="Телефон" onInput={checkValidity} />
+          <input id="tel" type="text" placeholder="Телефон" onInput={checkValidity} name="tel" />
+          <button
+            type="submit"
+            id="send_reg"
+            className="send_registration"
+            href="#"
+            disabled={registerBtn}
+          >
+            Зарегистрироваться
+          </button>
         </form>
-        <button
-          type="submit"
-          id="send_reg"
-          className="send_registration"
-          href="#"
-          disabled={registerBtn}
-        >
-          Зарегистрироваться
-        </button>
       </div>
     </div>
   );
