@@ -21,7 +21,7 @@ export const goodsSlice = createSlice({
   },
 });
 
-export const { goodsStateSwitcher, changeGoodsQuantity, setCurrent } = goodsSlice.actions;
+export const { goodsStateSwitcher, changeGoodsQuantity } = goodsSlice.actions;
 export const selectGoods = (state) => state.goods.goods;
 export const selectGoodsState = (state) => state.goods.goodsProcess.goodsState;
 

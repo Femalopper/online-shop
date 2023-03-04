@@ -9,17 +9,22 @@ import { formStateSwitcher } from '../../store/formSlice';
 import cart from '../../img/shopping-basket-wight.svg';
 import classNames from 'classnames';
 import require from 'requirejs';
+import $ from 'jquery';
 
 const Header = (props) => {
-  const categories = props.data.nav.map((item, index) => (
-    <li key={index} className="nav_a">
-      <NavLink to={item.link}>{item.text}</NavLink>
-    </li>
-  ));
-
   const goodsState = useSelector(selectGoodsState);
   const totalQuantity = useSelector(selectQuantity);
   const dispatch = useDispatch();
+  const showSpinner = () => {
+    $('#load').fadeIn(200);
+    $('#load').fadeOut(300);
+  };
+
+  const categories = props.data.nav.map((item, index) => (
+    <li key={index} className="nav_a" onClick={showSpinner}>
+      <NavLink to={item.link}>{item.text}</NavLink>
+    </li>
+  ));
 
   const openCart = (event) => {
     event.preventDefault();
@@ -65,6 +70,7 @@ const Header = (props) => {
         {/*<!---Логотип сайта----------------------------------------------->*/}
         <div className="logo">
           <img src={require('../../img/logo.png')} />
+          <span id="load" className="hide"></span>
         </div>
       </header>
       {/*<!---Меню-------------------------------------------------->*/}
