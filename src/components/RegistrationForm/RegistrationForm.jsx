@@ -99,14 +99,18 @@ const RegistrationForm = () => {
       className={classNames(
         {
           hide: formState === 'closed',
-          'cart-active': formState === 'opened',
-          'animate-cart-close': formState === 'closing' || formState === 'sent register data',
         },
         'blind_Layer'
       )}
       ref={containerRef}
     >
-      <div id="registration" className="popup">
+      <div
+        id="registration"
+        className={classNames('popup', {
+          'cart-active': formState === 'opened',
+          'animate-cart-close': formState === 'closing' || formState === 'sent register data',
+        })}
+      >
         <button href="#" style={{ float: 'right' }} className="closeButton" onClick={closeForm}>
           ✕
         </button>

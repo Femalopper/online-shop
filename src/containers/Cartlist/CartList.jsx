@@ -27,7 +27,6 @@ const CartList = () => {
   const totalQuantity = useSelector(selectQuantity);
   const dispatch = useDispatch();
   const orderForm = useSelector(selectConsumerData);
-  const cartRef = React.createRef();
   const totalSum = useSelector(selectTotalSum);
 
   const activateMakeOrderBtn = () => {
@@ -82,55 +81,61 @@ const CartList = () => {
       className={classNames(
         {
           hide: cartState === 'closed',
-          'cart-active': cartState === 'opened',
-          'animate-cart-close': cartState === 'closing' || cartState === 'sent order',
         },
-        'cart-container'
+        'cart-container',
+        'scrollable'
       )}
       id="cart"
-      ref={cartRef}
     >
-      <div className="cart">
-        <div className="close-cart-wrapper">
-          <button className="close-cart" onClick={closeCart}>
-            ×
-          </button>
+      <div
+        className={classNames({
+          'cart-active': cartState === 'opened',
+          'animate-cart-close': cartState === 'closing' || cartState === 'sent order',
+        })}
+        id="cart"
+      >
+        <div className="cart">
+          <div className="close-cart-wrapper">
+            <button className="close-cart" onClick={closeCart}>
+              ×
+            </button>
+          </div>
+          <table onClick={cartHandler}>
+            <tbody>
+              <tr>
+                <th className="good">Товар</th>
+                <th>{`Цена / ${goods[0].currency}`}</th>
+                <th>{`Общая цена / ${goods[0].currency}`}</th>
+                <th>Кол-во</th>
+                <th className="delete delete-all" data-click="delete">
+                  <span className="delete delete-all-span" data-click="delete">
+                    Очистить корзину
+                  </span>
+                </th>
+              </tr>
+              {Object.keys(cart).map((key, index) => (
+                <Cart key={index} dataArticul={goodsObj[key]} quantity={cart[key].quantity} />
+              ))}
+            </tbody>
+          </table>
+          <div className={classNames({ hide: totalQuantity !== 0 }, 'cart-empty')}>
+            Корзина пуста!
+          </div>
+          <div className="total-result">
+            <p>
+              <b>Общая стоимость:</b>
+            </p>
+            <p className="total-sum-number">
+              {totalSum}
+              {goods[0].currency}
+            </p>
+            <p className="total-quantity">
+              <b>Всего товаров:</b>
+            </p>
+            <p className="total-sum-number">{totalQuantity}</p>
+          </div>
+          <CartForm close={closeCart} deleteAll={deleteAll} />
         </div>
-        <table onClick={cartHandler}>
-          <tbody>
-            <tr>
-              <th className="good">Товар</th>
-              <th>{`Цена / ${goods[0].currency}`}</th>
-              <th>{`Общая цена / ${goods[0].currency}`}</th>
-              <th>Кол-во</th>
-              <th className="delete delete-all" data-click="delete">
-                <span className="delete delete-all-span" data-click="delete">
-                  Очистить корзину
-                </span>
-              </th>
-            </tr>
-            {Object.keys(cart).map((key, index) => (
-              <Cart key={index} dataArticul={goodsObj[key]} quantity={cart[key].quantity} />
-            ))}
-          </tbody>
-        </table>
-        <div className={classNames({ hide: totalQuantity !== 0 }, 'cart-empty')}>
-          Корзина пуста!
-        </div>
-        <div className="total-result">
-          <p>
-            <b>Общая стоимость:</b>
-          </p>
-          <p className="total-sum-number">
-            {totalSum}
-            {goods[0].currency}
-          </p>
-          <p className="total-quantity">
-            <b>Всего товаров:</b>
-          </p>
-          <p className="total-sum-number">{totalQuantity}</p>
-        </div>
-        <CartForm close={closeCart} deleteAll={deleteAll} ref={cartRef} />
       </div>
     </div>
   );

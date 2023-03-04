@@ -8,13 +8,11 @@ const Cart = (props) => {
   return (
     <>
       <tr key={quantity * cost}>
-        <td>
-          <div className="cart-good-name">
-            <div className="good-image">
-              <img src={require(`../../img/${image}`)} width="45px" alt="productImage" />
-            </div>
-            <p className="good-name">{title}</p>
+        <td className="cart-good-name">
+          <div className="good-image">
+            <img src={require(`../../img/${image}`)} width="45px" alt="productImage" />
           </div>
+          <p className="good-name">{title}</p>
         </td>
         <td>{cost}</td>
         <td>{quantity * cost}</td>

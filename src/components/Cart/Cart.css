@@ -2,7 +2,8 @@
 
 .cart-good-name {
   display: flex;
-  width: 100%;
+  align-items: center;
+  width: 200px;
   flex-direction: row;
 }
 

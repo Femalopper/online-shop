@@ -51,7 +51,6 @@ fieldset,
 form,
 label,
 legend,
-table,
 caption,
 article,
 aside,
@@ -404,21 +403,19 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.firstelement {
-  height: 560px;
-  margin: 3% 5%;
+  justify-content: space-around;
+  width: 90%;
+  margin-bottom: 60px;
 }
 
 .description {
-  width: 60%;
+  width: 65%;
   padding-top: 2%;
-  margin-top: 3%;
+  margin-top: 2%;
   margin-bottom: 4%;
   font-size: 1.4em;
   border-top: 1px solid #bababa;
+  text-align: justify;
 }
 
 .main__description {
@@ -459,6 +456,7 @@ address a {
 
 .blind_Layer {
   background-image: url(../../src/img/background.gif);
+  background-color: rgb(253, 242, 251);
   opacity: 0.98;
   bottom: 0;
   left: 0;
@@ -496,12 +494,16 @@ address a {
   border: 2px solid rgba(255, 230, 249, 0.8);
   border-radius: 10px;
   background-color: rgba(255, 230, 249, 0.8);
+  transition: 0.5s;
 }
 
 .send_registration:enabled {
-  background-color: white;
-  color: gray;
+  background-color: transparent;
+  color: rgb(103, 103, 103);
   border: 2px solid rgb(255, 161, 233);
+  text-shadow: 1px 1px 1px #d577c1, 0 0 1em white, 0 0 0.2em white;
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1), 0 0 0 2px #d577c1,
+    0.3em 0.3em 1em rgba(255, 255, 255, 0.3);
 }
 
 .popup h2 {
@@ -551,11 +553,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   box-shadow: white;
-  -webkit-box-shadow: 0 0 0 30px rgb(255, 236, 250) inset !important;
-}
-
-.filled {
-  background-color: rgb(255, 236, 250);
+  -webkit-box-shadow: 0 0 0 30px rgb(253, 247, 251) inset !important;
 }
 
 .closeButton {
@@ -566,8 +564,10 @@ input:-webkit-autofill:active {
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 0.5% 1.5%;
   margin-right: 1.5%;
-  border: 1px solid rgb(213, 212, 212);
+  border: 2px solid transparent;
+  text-shadow: 1px 1px 1px #d577c1, 0 0 1em white, 0 0 0.2em white;
   border-radius: 7px;
+  transition: 0.5s;
 }
 .closeButton:hover,
 .send_registration:enabled:hover {

@@ -2,6 +2,7 @@ import React from 'react';
 import './Goods.css';
 import require from 'requirejs';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { selectGoods, changeGoodsQuantity } from '../../store/goodsSlice';
 import { increment } from '../../store/cartSlice';
 import Swal from 'sweetalert2';
@@ -11,6 +12,7 @@ const Goods = (props) => {
   const goodQuantity = React.createRef();
   const goods = useSelector(selectGoods);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { image, previousCost, cost, title, currency, quantity, articul } = props.data;
 
   const changeHandler = (event) => {
@@ -44,7 +46,6 @@ const Goods = (props) => {
   }, {});
 
   const addToCartHandler = (event) => {
-    console.log(event.target);
     const { currentId, value } = handler(event.target);
 
     if (value !== 0) {
@@ -84,8 +85,20 @@ const Goods = (props) => {
     }
   };
 
+  const openCard = (event) => {
+    event.preventDefault();
+    if (
+      !event.target.classList.contains('minus-quantity') &&
+      !event.target.classList.contains('plus-quantity') &&
+      !event.target.classList.contains('add-to-cart') &&
+      !event.target.classList.contains('input')
+    ) {
+      navigate(`/goods/${articul}`);
+    }
+  };
+
   return (
-    <div className="cell">
+    <div className="cell" onClick={openCard}>
       <img src={require(`../../img/${image}`)} alt="" />
       <figcaption className="good-title">{title}</figcaption>
       <div className="price">
@@ -111,6 +124,7 @@ const Goods = (props) => {
           ref={goodQuantity}
           onChange={changeHandler}
           value={quantity}
+          className="input"
         ></input>
         <button className="plus-quantity" data-key={articul} onClick={plusHandler}>
           +

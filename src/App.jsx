@@ -29,9 +29,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Header data={list} />}>
             <Route index element={<Main />} />
-            <Route path="goods" element={<GoodsList />}>
-              <Route path=":cardURL" element={<Card />} />
-            </Route>
+            <Route path="goods" element={<GoodsList />} />
+            <Route path="goods/:cardURL" element={<Card />} />
             <Route path="shippment" element={<Shippment />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />

@@ -42,10 +42,10 @@
   border-radius: 3px;
   background-color: white;
   padding: 0px 50px 50px 50px;
+  margin-bottom: 60px;
 }
 
 .cart-active {
-  display: flex;
   transform: translateY(5%);
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
