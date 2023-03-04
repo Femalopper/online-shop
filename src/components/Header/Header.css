@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Oswald:wght@200;300;400&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Oswald:wght@200;300;400&display=swap');
 
 .menu {
   display: flex;
@@ -25,9 +25,10 @@
 }
 
 .circle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   bottom: 51px;
   left: 30px;
   width: 17px;
@@ -37,6 +38,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 0.6em;
+  font-weight: bold;
   padding: 2px;
   color: rgb(190, 27, 187);
 }

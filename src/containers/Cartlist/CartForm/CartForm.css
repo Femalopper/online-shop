@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@700&family=Oswald:wght@200;300;400&family=Secular+One&display=swap');
+
 form {
   width: 100%;
 }
@@ -26,21 +28,26 @@ form {
 }
 
 .make-order-field:focus {
-  box-shadow: rgb(129, 252, 252) 0 3px 0 0;
+  box-shadow: #db2eb6 0 3px 0 0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 .payment {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
   width: 96%;
   height: 40px;
   margin-bottom: 10px;
-  padding-left: 10px;
-  border: 1px solid #e2e2e2;
+  padding-left: 12px;
   border-radius: 3px;
-  background-color: rgb(238, 238, 238);
   cursor: pointer;
+  background-color: rgba(126, 85, 119, 0.8);
+  color: white;
+  margin-right: 28px;
+  border: 1px solid rgb(126, 85, 119);
+  transition: 0.3s;
 }
 
 input:focus {
@@ -51,26 +58,47 @@ input:focus {
   display: flex;
   height: 45px;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 12px;
 }
 
-.form-buttons button {
-  width: 21%;
-  background-color: rgb(238, 238, 238);
+.form-buttons .continue-shopping {
+  width: 30%;
+  text-align: left;
   margin-right: 28px;
-  border: 1px solid #e2e2e2;
+  background-color: rgb(188, 157, 183);
+  color: white;
+  border: 1px solid rgb(126, 85, 119);
   border-radius: 3px;
   cursor: pointer;
-  font-size: 0.8em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
+  padding-left: 15px;
+  transition: 0.3s;
+}
+
+.form-buttons .make-order-btn {
+  width: 21%;
+  text-align: left;
+  background-color: rgba(126, 85, 119, 0.8);
+  color: white;
+  margin-right: 28px;
+  border: 1px solid rgb(126, 85, 119);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
+  padding-left: 15px;
+  transition: 0.3s;
 }
 
 .form-buttons button:hover,
 .payment:hover {
-  background-color: #e2e2e2;
+  background-color: rgba(122, 88, 117);
 }
 
 .form-buttons button:disabled {
   background-color: rgb(238, 238, 238);
+  border: 2px solid transparent;
 }
 
 .incorrect {

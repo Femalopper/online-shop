@@ -95,9 +95,10 @@ figcaption {
   border-right: none;
   border-top: 0.2px solid rgb(209, 209, 209);
   border-bottom: 0.2px solid rgb(209, 209, 209);
-  background-color: #aae0ef;
+  background-color: rgb(188, 157, 182);
   text-align: center;
   color: white;
+  transition: 0.2s;
 }
 
 .change-quantity button.minus-quantity {

@@ -51,7 +51,6 @@ const Goods = (props) => {
     if (value !== 0) {
       const data = [goodsObj[event.target.dataset.key], value];
       dispatch(increment(data));
-      dispatch(changeGoodsQuantity({ currentId, value: 1 }));
       Swal.fire({
         heightAuto: false,
         position: 'center',
@@ -65,6 +64,7 @@ const Goods = (props) => {
       goodQuantity.current.setAttribute('style', 'border: 1px solid red');
       setTimeout(() => {
         goodQuantity.current.removeAttribute('style');
+        dispatch(changeGoodsQuantity({ currentId, value: 1 }));
       }, 1000);
     }
   };

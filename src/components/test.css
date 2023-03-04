@@ -184,8 +184,8 @@ legend {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif;
   color: white;
-  background: rgba(213, 123, 180, 0.5);
-  border: 2px solid white;
+  background: rgb(142, 97, 136);
+  border: 1px solid rgb(92, 62, 88);
   font-size: 0.9em;
   font-weight: bold;
   border-radius: 7px;
@@ -197,8 +197,8 @@ legend {
   height: 40px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif;
-  background: rgba(177, 43, 128, 0.6);
-  border: 1.2px solid white;
+  background: rgb(192, 159, 186);
+  border: 1px solid rgb(92, 62, 88);
   color: white;
   font-size: 0.9em;
   font-weight: bold;
@@ -208,7 +208,7 @@ legend {
 
 .entry_1:hover,
 .entry_2:hover {
-  background: linear-gradient(#e8a2ce, white);
+  background: linear-gradient(rgb(174, 130, 167), white);
   color: #524950;
   transition: 0.7s;
 }
@@ -234,7 +234,7 @@ legend {
 }
 
 .nav {
-  background: content-box radial-gradient(#db2eb6, rgb(250, 240, 246));
+  background: content-box radial-gradient(rgb(169, 52, 154), rgb(250, 240, 246));
   width: 100%;
   height: 60px;
   text-align: center;
@@ -261,7 +261,7 @@ ul.mainNav {
 }
 
 .active {
-  color: #c9c9c9;
+  color: #d577c1;
   font-weight: bold;
   text-shadow: 1px 1px 2px black, 0 0 1em white;
 }
@@ -403,7 +403,7 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 90%;
+  width: 96%;
   margin-bottom: 60px;
 }
 
@@ -454,7 +454,8 @@ address a {
 /*---Форма регистрации-----*/
 
 .blind_Layer {
-  background-image: url(../../src/img/background.gif);
+  background: url(../../src/img/background.gif) no-repeat;
+  background-position: top center;
   background-color: rgb(253, 242, 251);
   opacity: 0.98;
   bottom: 0;
@@ -473,7 +474,7 @@ address a {
   -webkit-box-shadow: 550px 5px 15px 5px #ffdbff inset, 550px 5px 15px 5px rgb(255, 227, 248) inset,
     550px 5px 15px 5px #faeafc inset, 550px 10px 15px 7px #f7dbff inset,
     550px 15px 7px #f4beff inset, 550px 7px 27px 1px #ffb4ff inset;
-  box-shadow: 0 0 40px rgba(254, 20, 196, 0.4) inset;
+  box-shadow: 0 0 40px rgb(126, 85, 119) inset;
   border-radius: 3%;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -499,8 +500,6 @@ address a {
 .send_registration:enabled {
   background-color: transparent;
   color: rgb(103, 103, 103);
-  border: 2px solid rgb(255, 161, 233);
-  text-shadow: 1px 1px 1px #d577c1, 0 0 1em white, 0 0 0.2em white;
   box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1), 0 0 0 2px #d577c1,
     0.3em 0.3em 1em rgba(255, 255, 255, 0.3);
 }
@@ -525,12 +524,14 @@ input {
   display: block;
   width: 470px;
   margin-bottom: 10px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgb(126, 85, 119);
   border-radius: 15px;
   display: inline-block;
   height: 40px;
   line-height: 40px;
   padding: 0;
+  opacity: 0.7;
+  background-color: transparent;
 }
 
 .popup input[type='password'] {
@@ -539,12 +540,14 @@ input {
   display: block;
   width: 470px;
   margin-bottom: 10px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgb(126, 85, 119);
   border-radius: 15px;
   display: inline-block;
   height: 40px;
   line-height: 40px;
   padding: 0;
+  opacity: 0.7;
+  background-color: transparent;
 }
 
 input:-webkit-autofill,
@@ -570,9 +573,8 @@ input:-webkit-autofill:active {
 }
 .closeButton:hover,
 .send_registration:enabled:hover {
-  background-color: rgba(176, 20, 119, 0.5);
+  background-color: rgb(174, 130, 167);
   color: white;
-  border: 2px solid white;
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1560px) {

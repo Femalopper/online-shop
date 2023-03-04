@@ -101,8 +101,10 @@ const CartForm = (props) => {
           </div>
         </div>
         <div className="form-buttons">
-          <button onClick={props.close}>Продолжить покупки</button>
-          <button id="submit" disabled={submitButton}>
+          <button onClick={props.close} className="continue-shopping">
+            Продолжить покупки
+          </button>
+          <button id="submit" className="make-order-btn" disabled={submitButton}>
             Сделать заказ
           </button>
         </div>

@@ -102,7 +102,7 @@ const CartList = () => {
           </div>
           <table onClick={cartHandler}>
             <tbody>
-              <tr>
+              <tr className="first-row">
                 <th className="good">Товар</th>
                 <th>{`Цена / ${goods[0].currency}`}</th>
                 <th>{`Общая цена / ${goods[0].currency}`}</th>
