@@ -3,20 +3,20 @@
 
 ## Description
 
-Remastered version of adaptive and responsive online shop project - https://femalopper.github.io/frontend-project-onlineShop/src/html/main.htmlDemonstration with the usage of online-shop-template (https://femalopper.github.io/online-shop-template/).
+Remastered version of adaptive and responsive online shop project - https://femalopper.github.io/frontend-project-onlineShop/src/html/main.html with the usage of online-shop-template (https://femalopper.github.io/online-shop-template/).
 
 ## Animation
 
-![Main functionality](https://github.com/Femalopper/raw/blob/main/images/online-shop-template/Online-shop-template.gif)
+![Main functionality](https://github.com/Femalopper/raw/blob/main/images/online-shop/Online-shop-template.gif)
 
 ## Setup
 
 ### 1\. Clone project
 
 ```sh
- git clone git@github.com:Femalopper/online-shop-template.git
+ git clone git@github.com:Femalopper/online-shop.git
 
- cd online-shop-template
+ cd online-shop
 
  npm ci
 ```
@@ -26,7 +26,7 @@ Remastered version of adaptive and responsive online shop project - https://fema
 ### 2\. Change products description and add new products
 
 ```sh
-  cd online-shop-template/src/data
+  cd online-shop/src/data
 
   code goods.json
 ```
@@ -34,14 +34,17 @@ Remastered version of adaptive and responsive online shop project - https://fema
 The file goods.json consists of information about products.
 The following fields in the file must be filled:
 
-| Field    | Description                       |
-| :------- | :-------------------------------- |
-| articul  | unique item number of the product |
-| title    | the name of the product           |
-| cost     | the price of the product          |
-| quantity | number of pcs                     |
-| image    | name of the image with extension  |
-| currency | must be the same for all products |
+| Field        | Description                                   |
+| :----------- | :-------------------------------------------- |
+| articul      | unique item number of the product             |
+| title        | the name of the product                       |
+| previousCost | the previous price of the product             |
+| cost         | the price of the product                      |
+| quantity     | number of pcs                                 |
+| image        | name of the image with extension              |
+| currency     | must be the same for all products             |
+| description  | the list of strings, describing the product   |
+| composition  | the list of strings, describing the materials |
 
 ---
 
@@ -50,7 +53,7 @@ The following fields in the file must be filled:
 > All the images must be located in the img folder. Do not move img folder!
 
 ```sh
-  cd online-shop-template/src/img
+  cd online-shop/src/img
 ```
 
 ---
@@ -58,7 +61,7 @@ The following fields in the file must be filled:
 ### 4\. Run app
 
 ```sh
-  cd online-shop-template
+  cd online-shop
 
   npm start
 ```
