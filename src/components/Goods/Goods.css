@@ -31,9 +31,8 @@
   cursor: pointer;
 }
 
-.cell img {
+.cell .product-img {
   width: 100%;
-  flex-grow: 1;
 }
 
 .good-title {
@@ -140,6 +139,7 @@ input::-webkit-inner-spin-button {
 .add-to-cart {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   position: relative;
   color: rgb(103, 103, 103);
   text-shadow: 1px 1px 2px #d577c1, 0 0 1em white, 0 0 0.2em white;
@@ -153,7 +153,6 @@ input::-webkit-inner-spin-button {
   margin-top: 5%;
   font-weight: bold;
   border-radius: 10px;
-  padding-left: 7%;
   transition: 0.2s;
 }
 
@@ -164,8 +163,7 @@ input::-webkit-inner-spin-button {
 }
 
 .add-to-cart img {
-  width: 5%;
-  margin-top: 1%;
+  margin-left: 2%;
 }
 
 .swal2-popup {
@@ -191,32 +189,66 @@ input::-webkit-inner-spin-button {
   color: red;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
-  .goods-block {
-    width: 20%;
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .cell {
+    width: 32%;
+    padding-bottom: 4%;
+    font-size: 1em;
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1000px) {
-  .goods-block {
-    width: 20%;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 800px) {
-  .goods-block {
-    width: 25%;
-  }
-}
-
-@media screen and (min-width: 400px) and (max-width: 600px) {
-  .goods-block {
+@media screen and (min-width: 540px) and (max-width: 900px) {
+  .cell {
     width: 40%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    font-size: 0.9em;
+  }
+
+  .add-to-cart {
+    font-size: 1em;
+  }
+
+  .change-quantity {
+    width: 80%;
+    height: 32px;
   }
 }
 
-@media screen and (min-width: 200px) and (max-width: 400px) {
-  .goods-block {
-    width: 60%;
+@media screen and (min-width: 420px) and (max-width: 540px) {
+  .cell {
+    width: 55%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    font-size: 0.8em;
+  }
+
+  .change-quantity {
+    width: 80%;
+    height: 28px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 420px) {
+  .cell {
+    width: 64%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    font-size: 0.8em;
+  }
+
+  .add-to-cart {
+    font-size: 0.9em;
+  }
+
+  .change-quantity {
+    width: 80%;
+    height: 25px;
   }
 }

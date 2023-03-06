@@ -1,5 +1,6 @@
 import React from 'react';
 import require from 'requirejs';
+import './Cart.css';
 
 const Cart = (props) => {
   const { quantity } = props;

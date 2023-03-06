@@ -1,5 +1,4 @@
 import React from 'react';
-import '../test.css';
 import require from 'requirejs';
 import './Shippment.css';
 

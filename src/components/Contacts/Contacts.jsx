@@ -1,10 +1,9 @@
 import React from 'react';
-import '../test.css';
 import './Contacts.css';
 
 const Contacts = () => {
   return (
-    <section id="page5" className="goods-wrapper">
+    <section className="goods-wrapper">
       <h1>Контакты</h1>
       <div className="about_us">
         <h2>Отдел розничных продаж:</h2>

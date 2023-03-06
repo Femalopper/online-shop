@@ -9,7 +9,7 @@ form {
   margin-top: 30px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .make-order div {
@@ -58,7 +58,6 @@ input:focus {
   display: flex;
   height: 45px;
   margin-top: 20px;
-  margin-left: 12px;
 }
 
 .form-buttons .continue-shopping {
@@ -106,10 +105,6 @@ input:focus {
 }
 
 @media screen and (min-width: 620px) and (max-width: 840px) {
-  .form-buttons {
-    margin-left: 12px;
-  }
-
   .form-buttons button {
     width: 30%;
     margin-right: 3%;
@@ -119,27 +114,32 @@ input:focus {
 @media screen and (min-width: 420px) and (max-width: 620px) {
   .form-buttons {
     width: 100%;
-    margin-left: 7px;
   }
 
-  .form-buttons button {
-    width: 48%;
-    margin-right: 2%;
+  .form-buttons .continue-shopping {
+    width: 50%;
+  }
+
+  .form-buttons .make-order-btn {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 270px) and (max-width: 420px) {
+  .form-buttons {
+    width: 100%;
+  }
+
   form input {
     font-size: 0.8em;
   }
 
-  .form-buttons {
-    width: 100%;
-    margin-left: 7px;
+  .form-buttons .continue-shopping {
+    width: 47%;
   }
 
-  .form-buttons button {
-    width: 48%;
-    margin-right: 2%;
+  .form-buttons .make-order-btn {
+    width: 47%;
+    margin-right: 0;
   }
 }

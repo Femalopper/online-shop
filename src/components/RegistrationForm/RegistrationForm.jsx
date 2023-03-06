@@ -11,6 +11,7 @@ import {
 import { goodsStateSwitcher } from '../../store/goodsSlice';
 import classNames from 'classnames';
 import Swal from 'sweetalert2';
+import './RegistrationForm.css';
 
 const RegistrationForm = () => {
   const formState = useSelector(selectFormState);
@@ -111,12 +112,12 @@ const RegistrationForm = () => {
           'animate-cart-close': formState === 'closing' || formState === 'sent register data',
         })}
       >
-        <button href="#" style={{ float: 'right' }} className="closeButton" onClick={closeForm}>
+        <button href="#" style={{ float: 'right' }} className="close-button" onClick={closeForm}>
           ✕
         </button>
         <h2>Введите ваши контактные данные</h2>
 
-        <form id="formToSend" onSubmit={sendRegisterData} ref={formRef}>
+        <form className="form-to-send" onSubmit={sendRegisterData} ref={formRef}>
           <input id="name" type="text" placeholder="Имя" onInput={checkValidity} name="name" />
           <input
             id="mail"
@@ -135,13 +136,7 @@ const RegistrationForm = () => {
             name="password"
           />
           <input id="tel" type="text" placeholder="Телефон" onInput={checkValidity} name="tel" />
-          <button
-            type="submit"
-            id="send_reg"
-            className="send_registration"
-            href="#"
-            disabled={registerBtn}
-          >
+          <button type="submit" id="send_reg" className="register" href="#" disabled={registerBtn}>
             Зарегистрироваться
           </button>
         </form>

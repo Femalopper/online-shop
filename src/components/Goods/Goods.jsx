@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { selectGoods, changeGoodsQuantity } from '../../store/goodsSlice';
 import { increment } from '../../store/cartSlice';
 import Swal from 'sweetalert2';
-import '../test.css';
 
 const Goods = (props) => {
   const goodQuantity = React.createRef();
@@ -91,7 +90,8 @@ const Goods = (props) => {
       !event.target.classList.contains('minus-quantity') &&
       !event.target.classList.contains('plus-quantity') &&
       !event.target.classList.contains('add-to-cart') &&
-      !event.target.classList.contains('input')
+      !event.target.classList.contains('input') &&
+      !event.target.classList.contains('add-to-cart-img')
     ) {
       navigate(`/goods/${articul}`);
     }
@@ -99,7 +99,7 @@ const Goods = (props) => {
 
   return (
     <div className="cell" onClick={openCard}>
-      <img src={require(`../../img/${image}`)} alt="" />
+      <img src={require(`../../img/${image}`)} className="product-img" alt="" />
       <figcaption className="good-title">{title}</figcaption>
       <div className="price">
         <p className="price0">
@@ -137,6 +137,7 @@ const Goods = (props) => {
           width="30"
           height="30"
           data-key={articul}
+          className="add-to-cart-img"
         />
       </button>
     </div>

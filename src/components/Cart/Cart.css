@@ -61,6 +61,7 @@
 @media screen and (min-width: 420px) and (max-width: 620px) {
   .good-image {
     margin-left: 10px;
+    padding-right: 60px;
   }
 
   .good-name {

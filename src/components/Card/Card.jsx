@@ -1,5 +1,4 @@
 import React from 'react';
-import '../test.css';
 import { useParams } from 'react-router-dom';
 import { selectGoods } from '../../store/goodsSlice';
 import { useSelector } from 'react-redux';
@@ -17,7 +16,7 @@ const Card = () => {
   return (
     <article className="goods-wrapper">
       <h1>{goodsObj[cardURL].title}</h1>
-      <div className="card_and_description">
+      <div className="card-and-description">
         <Goods data={goodsObj[cardURL]} key={cardURL} />
         <div className="description">
           <div>{goodsObj[cardURL].description.join('\n')}</div>

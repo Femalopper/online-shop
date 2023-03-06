@@ -1,10 +1,9 @@
 import React from 'react';
-import '../test.css';
 import './About.css';
 
 const About = () => {
   return (
-    <section id="page4" className="goods-wrapper">
+    <section className="goods-wrapper">
       <h1>О компании</h1>
       <div className="about_us">
         Мы рады приветствовать посетителей в нашем интернет-магазине. У нас предлагаются товары,

@@ -65,12 +65,12 @@
 .animate-cart-close {
   transform: translateY(15%);
   opacity: 0;
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-  -webkit-animation: cubic-bezier(0.1, -0.6, 0.2, 0) 0.8s;
-  animation: cubic-bezier(0.1, -0.6, 0.2, 0) 0.8s;
-  animation-duration: 0.8s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: cubic-bezier(0.1, -0.6, 0.2, 0) 0.5s;
+  animation: cubic-bezier(0.1, -0.6, 0.2, 0) 0.5s;
+  animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -131,7 +131,6 @@ th {
 }
 
 .delete-all:hover,
-.delete-all-span:hover,
 .minus:hover,
 .plus:hover,
 .delete-item:hover {
@@ -149,7 +148,7 @@ th {
   text-shadow: 1px 1px 2px #472640, 0 0 1em rgb(132, 132, 132), 0 0 0.2em rgb(128, 128, 128);
   border-top: 1px solid rgb(201, 201, 201);
   border-bottom: 1px solid rgb(201, 201, 201);
-  padding: 10px 0px 10px 20px;
+  padding: 10px 10px 10px 20px;
 }
 
 .total-sum-number {
@@ -168,7 +167,10 @@ th {
 
 @media screen and (min-width: 620px) and (max-width: 840px) {
   .cart {
-    width: 500px;
+    width: 600px;
+  }
+  .cart-good-name {
+    width: 120px;
   }
 }
 
@@ -181,8 +183,16 @@ th {
     display: block;
   }
 
+  .cart-good-name {
+    width: 100%;
+  }
+
+  tr {
+    width: 100%;
+  }
+
   td {
-    width: 297px;
+    width: 100%;
     border: 1px solid rgb(239, 239, 239);
   }
 
@@ -191,7 +201,7 @@ th {
   }
 
   .delete-all {
-    width: 299px;
+    width: 100%;
     display: block;
   }
 
@@ -200,7 +210,7 @@ th {
   }
 
   .cart {
-    width: 300px;
+    width: 400px;
   }
 
   .cart-active {
@@ -208,12 +218,12 @@ th {
   }
 
   .total-result {
-    padding-left: 0;
+    padding-left: 2%;
     font-size: 0.9em;
   }
 }
 
-@media screen and (min-width: 270px) and (max-width: 420px) {
+@media screen and (min-width: 0px) and (max-width: 420px) {
   .cart-container {
     background-color: white;
     padding: 0;
@@ -231,9 +241,17 @@ th {
     display: block;
   }
 
+  tr {
+    width: 100%;
+  }
+
   td {
-    width: 257px;
+    width: 100%;
     border: 1px solid rgb(239, 239, 239);
+  }
+
+  .cart-good-name {
+    width: 100%;
   }
 
   .cart {
@@ -253,12 +271,12 @@ th {
   }
 
   .delete-all {
-    width: 258px;
+    width: 100%;
     display: block;
   }
 
   .total-result {
-    padding-left: 0;
-    font-size: 0.8em;
+    padding-left: 2%;
+    font-size: 0.9em;
   }
 }

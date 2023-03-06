@@ -2,13 +2,12 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectQuantity, cartStateSwitcher } from '../../store/cartSlice';
-import '../test.css';
-import './Header.css';
 import { goodsStateSwitcher, selectGoodsState } from '../../store/goodsSlice';
 import { formStateSwitcher } from '../../store/formSlice';
 import cart from '../../img/shopping-basket-wight.svg';
 import classNames from 'classnames';
 import require from 'requirejs';
+import './Header.css';
 import $ from 'jquery';
 
 const Header = (props) => {

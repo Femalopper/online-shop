@@ -1,8 +1,8 @@
 import React from 'react';
-import '../test.css';
 import { selectGoods } from '../../store/goodsSlice';
 import { useSelector } from 'react-redux';
 import Goods from '../Goods/Goods';
+import './Main.css';
 
 const Main = () => {
   const goods = useSelector(selectGoods);
@@ -14,7 +14,7 @@ const Main = () => {
   };
 
   return (
-    <section id="page1" className="goods-wrapper">
+    <section className="goods-wrapper">
       <h1>Хиты продаж</h1>
       <section className="goods-field">{showHits()}</section>
       <section className="main__description">
@@ -43,7 +43,7 @@ const Main = () => {
         Ассортимент продукции наполнен натуральной косметикой и надежными инструментами, тщательно
         подобранными в соответствии с новыми направлениями и технологиями в области маникюра и
         дизайна ногтей, макияжа и ухода за волосами. На полках магазина можно выбрать:
-        <ul className="main_info">
+        <ul className="main-info">
           <li>гель-лаки;</li>
           <li>средства для наращивания и дизайна ногтей;</li>
           <li>наборы для Shellac;</li>
@@ -60,7 +60,7 @@ const Main = () => {
         Мы реализуем качественный товар, который иногда можно увидеть в других интернет-магазинах.
         Однако благодаря нашей плодотворной работе мы может предложить покупателю лучшие условия для
         покупки:
-        <ul className="main_info">
+        <ul className="main-info">
           <li>огромный ассортимент товаров от самых популярных брендов;</li>
           <li>доступные цены на все позиции товаров;</li>
           <li>высокое качество продукции;</li>
