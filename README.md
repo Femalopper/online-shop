@@ -1,11 +1,12 @@
 [![Actions Status](https://github.com/Femalopper/online-shop-template/workflows/eslint-check/badge.svg?branch=main)](https://github.com/Femalopper/online-shop-template/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/22c27bb0af17a79a3931/maintainability)](https://codeclimate.com/github/Femalopper/online-shop-template/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/28d20e82c76fef9dd29e/maintainability)](https://codeclimate.com/github/Femalopper/online-shop/maintainability)
 
 ## Description
 
-Online shop template is an adaptive and cross-browser template for fast online shops implementation. 
+Online shop template is an adaptive and cross-browser template for fast online shops implementation.
 
 ### Implemented features
+
 :heavy_check_mark: Dynamic product catalog
 
 :heavy_check_mark: Cart
@@ -16,37 +17,41 @@ Online shop template is an adaptive and cross-browser template for fast online s
 
 ## Setup
 
-### 1\. Clone project ###
- 
-  ```sh
-   git clone git@github.com:Femalopper/online-shop-template.git
+### 1\. Clone project
 
-   cd online-shop-template
+```sh
+ git clone git@github.com:Femalopper/online-shop-template.git
 
-   npm ci
-  ```
-***
+ cd online-shop-template
 
-### 2\. Change products description and add new products ###
+ npm ci
+```
+
+---
+
+### 2\. Change products description and add new products
+
 ```sh
   cd online-shop-template/src/data
 
   code goods.json
 ```
+
 The file goods.json consists of information about products.
 The following fields in the file must be filled:
 
-Field | Description 
-:------------ | :-------------|
-articul | unique item number of the product | 
-title | the name of the product | 
-cost | the price of the product | 
-quantity | number of pcs | 
-image | name of the image with extension | 
-currency | must be the same for all products | 
+| Field    | Description                       |
+| :------- | :-------------------------------- |
+| articul  | unique item number of the product |
+| title    | the name of the product           |
+| cost     | the price of the product          |
+| quantity | number of pcs                     |
+| image    | name of the image with extension  |
+| currency | must be the same for all products |
 
-***
-### 3\. Download new products images ###
+---
+
+### 3\. Download new products images
 
 > All the images must be located in the img folder. Do not move img folder!
 
@@ -54,9 +59,9 @@ currency | must be the same for all products |
   cd online-shop-template/src/img
 ```
 
-***
+---
 
-### 4\. Run app ###
+### 4\. Run app
 
 ```sh
   cd online-shop-template
