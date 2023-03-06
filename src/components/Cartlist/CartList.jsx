@@ -13,9 +13,9 @@ import {
   selectTotalSum,
   cartStateSwitcher,
 } from '../../store/cartSlice';
-import Cart from '../../components/Cart/Cart';
+import Cart from './Cart/Cart';
 import './CartList.css';
-import '../../components/Cart/Cart.css';
+import './Cart/Cart.css';
 import classNames from 'classnames';
 import CartForm from './CartForm/CartForm';
 import { selectConsumerData } from '../../store/cartSlice';

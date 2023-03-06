@@ -1,5 +1,5 @@
-import CartList from './containers/Cartlist/CartList';
-import GoodsList from './containers/GoodsList/GoodsList';
+import CartList from './components/Cartlist/CartList';
+import GoodsList from './components/GoodsList/GoodsList';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';

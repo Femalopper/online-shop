@@ -3,8 +3,8 @@ import './Goods.css';
 import require from 'requirejs';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { selectGoods, changeGoodsQuantity } from '../../store/goodsSlice';
-import { increment } from '../../store/cartSlice';
+import { selectGoods, changeGoodsQuantity } from '../../../store/goodsSlice';
+import { increment } from '../../../store/cartSlice';
 import Swal from 'sweetalert2';
 
 const Goods = (props) => {
@@ -99,7 +99,7 @@ const Goods = (props) => {
 
   return (
     <div className="cell" onClick={openCard}>
-      <img src={require(`../../img/${image}`)} className="product-img" alt="" />
+      <img src={require(`../../../img/${image}`)} className="product-img" alt="" />
       <figcaption className="good-title">{title}</figcaption>
       <div className="price">
         <p className="price0">
@@ -133,7 +133,7 @@ const Goods = (props) => {
       <button className="add-to-cart" type="button" data-key={articul} onClick={addToCartHandler}>
         Добавить в корзину
         <img
-          src={require('../../img/shopping-basket-wight.svg').default}
+          src={require('../../../img/shopping-basket-wight.svg').default}
           width="30"
           height="30"
           data-key={articul}

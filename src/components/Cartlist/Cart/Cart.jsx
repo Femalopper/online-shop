@@ -11,7 +11,7 @@ const Cart = (props) => {
       <tr key={quantity * cost}>
         <td className="cart-good-name">
           <div className="good-image">
-            <img src={require(`../../img/${image}`)} width="45px" alt="productImage" />
+            <img src={require(`../../../img/${image}`)} width="45px" alt="productImage" />
           </div>
           <p className="good-name">{title}</p>
         </td>
