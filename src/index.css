@@ -128,18 +128,12 @@ h2 {
   color: rgb(170, 20, 115);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+footer {
+  margin-bottom: 2%;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  footer {
-    margin-bottom: 20%;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 @media screen and (min-width: 540px) and (max-width: 900px) {
