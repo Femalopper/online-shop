@@ -3,13 +3,7 @@
 
 ## Description
 
-Online shop template is an adaptive and cross-browser template for fast online shops implementation.
-
-### Implemented features
-
-:heavy_check_mark: Dynamic product catalog
-
-:heavy_check_mark: Cart
+Remastered version of adaptive and responsive online shop project - https://femalopper.github.io/frontend-project-onlineShop/src/html/main.htmlDemonstration with the usage of online-shop-template (https://femalopper.github.io/online-shop-template/).
 
 ## Animation
 
