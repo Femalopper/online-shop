@@ -121,6 +121,10 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (min-width: 540px) and (max-width: 900px) {
+  .popup {
+    margin-bottom: 10%;
+  }
+
   .popup input[type='text'] {
     width: 95%;
   }
@@ -131,6 +135,10 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (min-width: 0px) and (max-width: 540px) {
+  .popup {
+    margin-bottom: 10%;
+  }
+
   .popup input[type='text'] {
     width: 90%;
   }
