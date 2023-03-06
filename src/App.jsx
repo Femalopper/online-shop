@@ -14,11 +14,11 @@ import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 const list = {
   nav: [
-    { link: '/', text: 'Главная' },
-    { link: '/goods', text: 'Каталог товаров' },
-    { link: '/shippment', text: 'Доставка и оплата' },
-    { link: '/about', text: 'О компании' },
-    { link: '/contacts', text: 'Контакты' },
+    { link: '/online-shop/', text: 'Главная' },
+    { link: '/online-shop/goods', text: 'Каталог товаров' },
+    { link: '/online-shop/shippment', text: 'Доставка и оплата' },
+    { link: '/online-shop/about', text: 'О компании' },
+    { link: '/online-shop/contacts', text: 'Контакты' },
   ],
 };
 
@@ -27,7 +27,7 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Header data={list} />}>
+          <Route path="/online-shop/" element={<Header data={list} />}>
             <Route index element={<Main />} />
             <Route path="goods" element={<GoodsList />} />
             <Route path="goods/:cardURL" element={<Card />} />

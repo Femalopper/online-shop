@@ -93,7 +93,7 @@ const Goods = (props) => {
       !event.target.classList.contains('input') &&
       !event.target.classList.contains('add-to-cart-img')
     ) {
-      navigate(`/goods/${articul}`);
+      navigate(`/online-shop/goods/${articul}`);
     }
   };
 
