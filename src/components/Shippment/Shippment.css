@@ -10,21 +10,12 @@
   padding-right: 5%;
   padding-left: 5%;
   padding-top: 1%;
-  padding-bottom: 2%;
-  text-align: justify;
-}
-
-.pay img,
-.shippment img {
-  margin-top: 3%;
-}
-
-.pay {
-  width: 50%;
-  padding-left: 5%;
-  padding-right: 5%;
   padding-bottom: 60px;
   text-align: justify;
+}
+
+.shippment img {
+  margin-top: 3%;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1300px) {

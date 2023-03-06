@@ -33,7 +33,7 @@ const Shippment = () => {
       </div>
       <h1>Оплата</h1>
       <div className="ship-info">
-        <div className="pay">
+        <div className="shippment">
           <h2>Наличными</h2>
           <img src={require('../../img/icons8-без-кредитных-карт-64.png')} alt="shop" />
           <br />
