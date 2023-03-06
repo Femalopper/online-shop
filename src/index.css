@@ -129,7 +129,7 @@ h2 {
 }
 
 footer {
-  background-color: rgb(142, 97, 136);
+  background-color: rgb(128, 62, 119);
 }
 
 code {
@@ -140,18 +140,10 @@ code {
   h1 {
     font-size: 2em;
   }
-
-  footer {
-    margin-bottom: 20%;
-  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 540px) {
   h1 {
     font-size: 1.8em;
-  }
-
-  footer {
-    margin-bottom: 30%;
   }
 }
