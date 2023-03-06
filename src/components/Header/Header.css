@@ -289,7 +289,6 @@ address {
   border-top: 1px solid #bababa;
   padding-top: 0.3%;
   padding-right: 2%;
-  margin-bottom: 2%;
   border-left: none;
   border-right: none;
   background-color: rgba(170, 20, 115, 0.8);
@@ -500,7 +499,6 @@ address a {
   address {
     font-size: 0.9em;
     padding-right: 2%;
-    margin-bottom: 10%;
   }
 }
 
@@ -568,6 +566,5 @@ address a {
   address {
     font-size: 0.8em;
     padding-right: 2%;
-    margin-bottom: 10%;
   }
 }
