@@ -132,6 +132,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  footer {
+    margin-bottom: 20%;
+  }
+}
+
 @media screen and (min-width: 540px) and (max-width: 900px) {
   h1 {
     font-size: 2em;
