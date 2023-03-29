@@ -118,6 +118,7 @@ const Goods = (props) => {
         <input
           id={articul}
           type="text"
+          autoComplete="off"
           onKeyDown={inputIsValid}
           onBlur={inputIsEmpty}
           maxLength="2"

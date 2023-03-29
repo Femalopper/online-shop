@@ -283,17 +283,19 @@ button {
 }
 
 address {
+  display: flex;
+  flex-direction: column;
   color: black;
   text-align: right;
   opacity: 0.9;
   border-top: 1px solid #bababa;
-  padding-top: 0.3%;
+  padding-top: 1%;
+  padding-bottom: 2%;
   padding-right: 2%;
   border-left: none;
   border-right: none;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100px;
 }
 
 address a {
