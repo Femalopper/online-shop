@@ -20,11 +20,13 @@ const CartForm = (props) => {
   const formRef = React.createRef();
 
   const validateEmail = (email) => {
-    return email;
+    const re = /^[\w]{1}[\w-.]*@[\w-]+\.[a-z]{2,4}$/i;
+    return re.test(String(email).toLowerCase());
   };
 
   const phoneNumber = (number) => {
-    return number;
+    const re = /^(\+7|7|8)?[\s-]?\(?[489][0-9]{2}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$/;
+    return re.test(number);
   };
 
   const checkValidity = (event) => {
