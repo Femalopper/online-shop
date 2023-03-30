@@ -309,7 +309,6 @@ address a {
 .scrollable {
   height: 100vh;
   overflow-y: auto;
-  padding-bottom: 10%;
 }
 
 footer {
@@ -359,6 +358,10 @@ footer {
 
   .basket {
     margin-left: 7%;
+  }
+
+  footer {
+    margin-bottom: 10%;
   }
 }
 
@@ -423,6 +426,10 @@ footer {
     margin-left: -35%;
   }
 
+  footer {
+    margin-bottom: 10%;
+  }
+
   address {
     font-size: 1em;
   }
@@ -438,6 +445,10 @@ footer {
   #load {
     top: 100%;
     left: 25%;
+  }
+
+  footer {
+    margin-bottom: 10%;
   }
 }
 
@@ -501,6 +512,10 @@ footer {
   .basket .circle {
     opacity: 0.9;
     margin-left: -35%;
+  }
+
+  footer {
+    margin-bottom: 20%;
   }
 
   address {
@@ -568,6 +583,10 @@ footer {
   .basket .circle {
     opacity: 0.9;
     margin-left: -35%;
+  }
+
+  footer {
+    margin-bottom: 20%;
   }
 
   address {
