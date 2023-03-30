@@ -59,28 +59,23 @@ input {
 .popup input[type='text'] {
   text-align: center;
   font-style: italic;
-  display: block;
   width: 470px;
   margin-bottom: 10px;
   border: 1px solid rgb(126, 85, 119);
   border-radius: 15px;
-  display: inline-block;
   height: 40px;
   line-height: 40px;
   padding: 0;
-  opacity: 0.7;
   background-color: transparent;
 }
 
 .popup input[type='password'] {
   text-align: center;
   font-style: italic;
-  display: block;
   width: 470px;
   margin-bottom: 10px;
   border: 1px solid rgb(126, 85, 119);
   border-radius: 15px;
-  display: inline-block;
   height: 40px;
   line-height: 40px;
   padding: 0;
