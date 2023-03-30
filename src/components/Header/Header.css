@@ -309,7 +309,12 @@ address a {
 .scrollable {
   height: 100vh;
   overflow-y: auto;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(142, 97, 136);
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1560px) {
